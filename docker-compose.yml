@@ -25,6 +25,7 @@ prometheus-server:
     - ./prometheus/data:/data
   command:
     - '--storage.tsdb.path=/data'
+    - '--storage.tsdb.retention.time=3m'
     - '--config.file=/etc/prometheus/prometheus.yml'
 
 grafana-ui:
